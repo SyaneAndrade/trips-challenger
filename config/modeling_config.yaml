@@ -1,0 +1,5 @@
+-
+    name: region
+    application: /usr/local/spark/app/trips/table_regions.py
+    conn: spark_default
+    spark_master: spark://spark:7077
