@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import monotonically_increasing_id
+from pyspark.sql.functions import monotonically_increasing_id, col
 import sys
 
 table = sys.argv[1]
@@ -23,7 +23,7 @@ def read_table_trips(spark):
 
 
 def create_region_trips(df):
-    return df.select("region").distinct()
+    return df.select(col("datasource").alias("source")).distinct()
 
 
 def create_id(df):
@@ -31,10 +31,10 @@ def create_id(df):
 
 
 def select_columns(df):
-    return df.select("id", "region")
+    return df.select("id", "source")
 
 
-def write_table_regions(df):
+def write_table_source(df):
     (
         df.write.format("jdbc")
         .option("driver", "org.postgresql.Driver")
@@ -50,7 +50,7 @@ def write_table_regions(df):
 if __name__ == "__main__":
     spark = spark_session()
     df_trips = read_table_trips(spark)
-    df_regions = create_region_trips(df_trips)
-    df_regions = create_id(df_regions)
-    df_regions = select_columns(df_regions)
-    write_table_regions(df_regions)
+    df_source = create_region_trips(df_trips)
+    df_source = create_id(df_source)
+    df_source = select_columns(df_source)
+    write_table_source(df_source)

@@ -5,4 +5,4 @@
     conn: spark_default
     spark_master: spark://spark:7077
     file_path: /usr/local/spark/resources/data/trips.csv
-    table: trips
+    table: trips_raw
