@@ -61,6 +61,7 @@ x-airflow-common:
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
+    - ./config:/opt/airflow/config
     - ./plugins:/opt/airflow/plugins
     - ./spark/app:/usr/local/spark/app 
     - ./spark/resources:/usr/local/spark/resources 

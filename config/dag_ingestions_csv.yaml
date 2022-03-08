@@ -1,0 +1,8 @@
+- 
+    id: trips
+    name: trips_ingestion
+    application: /usr/local/spark/app/test_spark.py
+    conn: spark_default
+    spark_master: spark://spark:7077
+    file_path: /usr/local/spark/resources/data/trips.csv
+    db: trips
