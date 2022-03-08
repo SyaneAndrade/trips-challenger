@@ -7,7 +7,7 @@ master = sys.argv[2]
 
 
 def spark_session():
-    return SparkSession.builder.master(master).getOrCreate()
+    return SparkSession.builder.master("local").getOrCreate()
 
 
 def read_table(spark, table):
