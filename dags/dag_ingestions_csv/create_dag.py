@@ -34,8 +34,9 @@ def create_spark_submit(dag, config):
                             name=config["name"],
                             conn_id=config["conn"],
                             application_args=[config["file_path"],
-                                              config["spark_master"],
-                                              config["db"]],
+                                              config["table"],
+                                             config["spark_master"]],
+                            jars="/usr/local/spark/resources/jars/postgresql-42.3.3.jar",
                             dag=dag)
 
 def create_pipeline(dag_id, config):

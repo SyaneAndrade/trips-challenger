@@ -12,8 +12,3 @@ class Config():
     
     def get_config(self):
         return self.__load()
-
-
-if __name__ == '__main__':
-    config = Config("C:\\Users\\Syane\\Documents\\Projects\\jobsity-challenge\\config\\dag_ingestions_csv.yaml")
-    print(config.get_config())
