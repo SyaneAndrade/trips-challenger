@@ -1,0 +1,4 @@
+AIRFLOW_UID=5000
+AIRFLOW_GID=0
+_PIP_ADDITIONAL_REQUIREMENTS=apache-airflow-providers-apache-spark
+AIRFLOW_CONN_SPARK_DEFAULT=spark://spark:7077
