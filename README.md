@@ -38,3 +38,25 @@ For stop enviroment:
 make stop
 ```
 
+## ACESSING
+
+### Airflow Webserver
+
+* URL: 
+http://localhost:8080
+* USER: 
+airflow
+* PASSWORD: 
+airflow
+
+### Jupyter notebook
+
+* URL: 
+http://localhost:8888/
+* PASSWORD: 
+airflow
+
+### Spark User Interface
+
+* URL: 
+http://localhost:8181/
