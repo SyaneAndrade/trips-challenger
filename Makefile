@@ -1,8 +1,12 @@
 local-windows:
-	virtualenv -p python3 .venv
+	virtualenv -p python .venv
 	.\.venv\Scripts\activate
 
-install-requiresments:
+local:
+	virtualenv -p python .venv
+	./.venv/Scripts/activate
+
+install-requirements:
 		pip install -r requirements.txt
 
 build:
