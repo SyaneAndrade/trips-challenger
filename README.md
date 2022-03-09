@@ -9,7 +9,9 @@ Trips Analysis is a project to analyze data use the following tools:
 
 ## Installation
 
-Pre-requisite: Docker
+### Pre-requisite: 
+* Docker
+* Create a file .env from env_template.txt
 
 For Installation:
 
