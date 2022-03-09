@@ -23,7 +23,9 @@ def read_table(spark, table):
 
 
 def parse_coordinator(coordenate):
-    return coordenate.replace("POINT(", "").replace(")", "")
+    coord = coordenate.replace("POINT (", "")
+    coord = coord.replace(")", "")
+    return coord
 
 
 udf_parse_coordinator = udf(lambda coord: parse_coordinator(coord))
