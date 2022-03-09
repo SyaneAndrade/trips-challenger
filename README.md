@@ -9,7 +9,9 @@ Trips Analysis is a project to analyze data use the following tools:
 
 ## Installation
 
-Pre-requisite: Docker
+### Pre-requisite: 
+* Docker
+* Create a file .env from env_template.txt
 
 For Installation:
 
@@ -38,3 +40,25 @@ For stop enviroment:
 make stop
 ```
 
+## ACESSING
+
+### Airflow Webserver
+
+* URL: 
+http://localhost:8080
+* USER: 
+airflow
+* PASSWORD: 
+airflow
+
+### Jupyter notebook
+
+* URL: 
+http://localhost:8888/
+* PASSWORD: 
+airflow
+
+### Spark User Interface
+
+* URL: 
+http://localhost:8181/
