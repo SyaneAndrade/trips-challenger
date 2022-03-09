@@ -17,6 +17,15 @@ For Installation:
 make build
 ```
 
+For dev enviroment:
+
+```bash
+make local
+make install-requirements
+```
+
+## Usage
+
 For up enviroment:
 
 ```bash
@@ -29,9 +38,3 @@ For stop enviroment:
 make stop
 ```
 
-For dev enviroment:
-
-```bash
-make local
-make install-requirements
-```
